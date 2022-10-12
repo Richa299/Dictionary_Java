@@ -42,6 +42,7 @@ class Driver{
   public static void main(String args[]) throws Exception{
     Dictionary obj=new Dictionary();
     Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the word");
     String give_word=sc.next();
      obj.loadRecords();
     System.out.println(obj.findWord(give_word));
