@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.*;
 import java.io.*;
 
 class Words{
@@ -34,17 +34,6 @@ class Dictionary{
      return null;
     }
 
-    public void SaveRecords() throws Exception{
-        BufferedWriter bw=new BufferedWriter(new FileWriter("newDictionary.txt"));
-        for(String i:map.keySet()){
-            Words w=map.get(i);
-            bw.write(w.wordname);
-            bw.write(",");
-             bw.write(w.meaning);
-              bw.write("\n");
-        }
-        bw.close();
-    }
 }
 
 
@@ -52,8 +41,9 @@ class Dictionary{
 class Driver{
   public static void main(String args[]) throws Exception{
     Dictionary obj=new Dictionary();
-    obj.loadRecords();
-    System.out.print(obj.findWord("snooze"));
-    obj.SaveRecords();
+    Scanner sc=new Scanner(System.in);
+    String give_word=sc.next();
+     obj.loadRecords();
+    System.out.println(obj.findWord(give_word));
   }
 }

@@ -1,2 +1,0 @@
-snooze, stop
-run,to move quickly
