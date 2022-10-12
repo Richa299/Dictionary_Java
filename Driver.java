@@ -12,7 +12,7 @@ class Words{
 
 class Dictionary{
     HashMap<String, Words> map=new HashMap<String, Words>();
-  public void loadRecords() throws Exception{
+  public void loadRecords() throws Exception {
      BufferedReader br= new BufferedReader(new FileReader("Dictionary.txt"));
      for (String line=br.readLine(); line!=null; line=br.readLine()){
         String [] parsedLine=line.split(",");
